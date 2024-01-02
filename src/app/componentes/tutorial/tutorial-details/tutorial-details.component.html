@@ -1,0 +1,9 @@
+<div id="detalle">
+  <div *ngIf="tarea ; else vacio">
+    <h3>Tarea</h3>
+    <p><b>Título:</b> {{tarea.texto}} </p>
+    <p><b>Fecha:</b> {{tarea.fecha}}</p>
+    <p><b>Estado:</b> Publised</p>
+  </div>
+  <ng-template #vacio><br>Selecciona una tarea...</ng-template>
+</div>
