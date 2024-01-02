@@ -1,0 +1,21 @@
+<div style="padding: 20px" *ngIf="idTarea ; else vacio">
+  <p>Título</p>
+  <input style="margin-bottom: 10px; width: 100%" type="text" [(ngModel)]="tareaSelect.texto">
+  <p>Fecha</p>
+  <input type="text" style="width: 100%" [(ngModel)]="tareaSelect.fecha">
+  <br><br>
+  <button type="button" class="btn btn-primary" style="margin-right: 5px;">UnPublish</button>
+  <button type="button" class="btn btn-warning" style="margin-right: 5px;">Delete</button>
+  <button type="button" class="btn btn-success" style="margin-right: 5px;">Update</button>
+</div>
+<ng-template #vacio>
+  <div style="padding: 20px">
+    <p>Título</p>
+    <input style="margin-bottom: 10px; width: 100%" type="text" [(ngModel)]="tareaSelect.texto">
+    <p>Fecha</p>
+    <input type="text" style="width: 100%" [(ngModel)]="tareaSelect.fecha">
+    <br><br>
+    <button type="button" class="btn btn-success">Submit</button>
+  </div>
+</ng-template>
+

@@ -4,7 +4,7 @@
     <p><b>Título:</b> {{tarea.texto}} </p>
     <p><b>Fecha:</b> {{tarea.fecha}}</p>
     <p><b>Estado:</b> Publised</p>
-    <button type="button" class="btn btn-warning">Editar</button>
+    <button [routerLink]="['/modifica', tarea.id]" type="button" class="btn btn-warning">Editar</button>
   </div>
   <ng-template #vacio><br>Selecciona una tarea...</ng-template>
 </div>

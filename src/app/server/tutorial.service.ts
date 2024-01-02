@@ -13,4 +13,8 @@ export class TutorialService {
     return this.http.get<Tutorial[]>(this.baseUrl)
   }
 
+  encontrarTarea (id : number) : Observable<Tutorial> {
+    let tutorial = this.http.get<Tutorial>(this.baseUrl+"/"+id);
+    return tutorial
+  }
 }
