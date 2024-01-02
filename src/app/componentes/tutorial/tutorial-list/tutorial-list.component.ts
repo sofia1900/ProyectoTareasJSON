@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Observable} from "rxjs";
-import {Tutorial} from "../../modelos/tutorial";
-import {TutorialService} from "../../server/tutorial.service";
+import {Tutorial} from "../../../modelos/tutorial";
+import {TutorialService} from "../../../server/tutorial.service";
 
 @Component({
   selector: 'app-tutorial-list',

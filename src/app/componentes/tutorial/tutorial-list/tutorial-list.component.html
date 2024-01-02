@@ -4,14 +4,16 @@
       <h2>Lista de tareas</h2>
       <div *ngIf="tutorials$ | async as tareas; else vacio">
         <div id="tabla" class="card">
-          <table class="table">
+          <table class="table" style="margin-bottom: 0px">
             <tbody>
             <tr *ngFor="let tarea of tareas">
               <td (click)="selectTarea(tarea)">{{tarea.texto}}</td>
+              <td class="text-end"><i class="bi bi-pencil"></i></td>
             </tr>
             </tbody>
           </table>
         </div>
+        <button type="button" class="btn btn-danger" style="margin: 15px">Eliminar todas <i class="bi bi-trash"></i></button>
       </div>
       <ng-template #vacio>No hay tareas</ng-template>
     </div>

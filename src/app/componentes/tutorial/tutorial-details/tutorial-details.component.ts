@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Tutorial} from "../../modelos/tutorial";
+import {Tutorial} from "../../../modelos/tutorial";
 
 @Component({
   selector: 'app-tutorial-details',

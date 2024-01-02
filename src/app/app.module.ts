@@ -7,13 +7,15 @@ import { HeaderComponent } from './componentes/header/header.component';
 import {HttpClientModule} from "@angular/common/http";
 import { TutorialListComponent } from './componentes/tutorial/tutorial-list/tutorial-list.component';
 import { TutorialDetailsComponent } from './componentes/tutorial/tutorial-details/tutorial-details.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TutorialListComponent,
-    TutorialDetailsComponent
+    TutorialDetailsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
