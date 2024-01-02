@@ -4,18 +4,19 @@
   <p>Fecha</p>
   <input type="text" style="width: 100%" [(ngModel)]="tareaSelect.fecha">
   <br><br>
+  <p><b>Status:</b> Published<p>
   <button type="button" class="btn btn-primary" style="margin-right: 5px;">UnPublish</button>
-  <button type="button" class="btn btn-warning" style="margin-right: 5px;">Delete</button>
-  <button type="button" class="btn btn-success" style="margin-right: 5px;">Update</button>
+  <button type="button" class="btn btn-warning" style="margin-right: 5px;" (click)="deleteTarea()">Delete</button>
+  <button type="button" class="btn btn-success" style="margin-right: 5px;" (click)="update()">Update</button>
 </div>
 <ng-template #vacio>
   <div style="padding: 20px">
     <p>Título</p>
-    <input style="margin-bottom: 10px; width: 100%" type="text" [(ngModel)]="tareaSelect.texto">
+    <input style="margin-bottom: 10px; width: 100%" type="text" [(ngModel)]="texto">
     <p>Fecha</p>
-    <input type="text" style="width: 100%" [(ngModel)]="tareaSelect.fecha">
+    <input type="text" style="width: 100%" [(ngModel)]="fecha">
     <br><br>
-    <button type="button" class="btn btn-success">Submit</button>
+    <button type="button" class="btn btn-success" (click)="submit()">Submit</button>
   </div>
 </ng-template>
 

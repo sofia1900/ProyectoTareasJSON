@@ -12,9 +12,24 @@ export class TutorialService {
   mostrarLista () : Observable<Tutorial[]>{
     return this.http.get<Tutorial[]>(this.baseUrl)
   }
-
   encontrarTarea (id : number) : Observable<Tutorial> {
     let tutorial = this.http.get<Tutorial>(this.baseUrl+"/"+id);
     return tutorial
+  }
+
+  submitTarea (tarea : Tutorial){
+    return this.http.post(this.baseUrl, tarea)
+  }
+
+  deleteTarea (id : number){
+    return this.http.delete(this.baseUrl+"/"+id)
+  }
+
+  delete (){
+    return this.http.delete(this.baseUrl)
+  }
+
+  updateTarea (tarea : Tutorial, id : number) {
+    return this.http.put(this.baseUrl+"/"+id, tarea)
   }
 }
