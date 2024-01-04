@@ -41,17 +41,12 @@ export class AddTutorialComponent implements OnInit{
 
   update (){
     this.service.updateTarea(this.tareaSelect, this.idTarea).subscribe(
-      (response) => {
-        this.router.navigate([''])
-      },
-      (error) => {
-        alert("ERROR");
-      }
+      success => { this.router.navigate(['']) },
+      error => { alert("ERROR"); }
     )
   }
 
   submit () {
-    let id = Math.floor(Math.random() * 1000);
     let tarea : Tutorial = {id : this.idTarea, texto: this.texto, fecha: this.fecha, recordatorio: true};
     this.service.submitTarea(tarea).subscribe(
       (response) => {
