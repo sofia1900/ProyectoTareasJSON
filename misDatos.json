@@ -20,12 +20,6 @@
       "id": 6
     },
     {
-      "texto": "Prueba añadir tarea",
-      "fecha": "02/01/2024",
-      "recordatorio": true,
-      "id": 7
-    },
-    {
       "texto": "Nueva tarea",
       "fecha": "04/01/2024",
       "recordatorio": true,
